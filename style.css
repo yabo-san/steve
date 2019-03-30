@@ -2,13 +2,17 @@
     /* BOX MODEL */
     width: 100%;
     height: 800px;
+
+    /*making the page not scroll */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /*make it fit to screen height */
     position: fixed;
     top:0px;
     bottom:0px;
     left:0px;
     right:0px;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     
     /* ENHANCEMENT */
     background-image: url('https://i.redd.it/r0ad288kma8x.jpg');
