@@ -15,9 +15,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
 
 </html>
-<body onload="randombg(); CoolClock.findAndCreateClocks();">
+<body onload="CoolClock.findAndCreateClocks(); randombg(); ">
+    <canvas id="clockid" class="CoolClock:simple:150:noSeconds:GMTOffset"></canvas>
+
     <div id="random" ></div>
-    <canvas id="clockid" class="CoolClock:simple:Radius:noSeconds:GMTOffset"></canvas>
 
 </body>
 
