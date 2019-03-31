@@ -155,9 +155,9 @@ console.log(scores);
 var canvas3 = document.getElementById("graph");
 var ctx3 = canvas3.getContext("2d");
 canvas3.height = 200;
-canvas3.width = 800;
+canvas3.width = 400;
 
-var bar_width = canvas.width / scores.length;
+var bar_width = canvas3.width / scores.length;
 for (var i = 0; i < scores.length; i++) {
     ctx3.fillStyle = (scores[i] >= 0) ? "#00B288" : "#f21a78";
     ctx3.fillRect(i * bar_width, canvas3.height / 2, bar_width, scores[i] * -100);
