@@ -19,7 +19,7 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;  
-    z-index: -1;
+    z-index: -2;
 
   }
 #clock{
@@ -34,7 +34,7 @@
     top: 0;
     bottom: 0; 
 
-    z-index: 3;
+    z-index: -1;
 
 
 }
@@ -51,10 +51,10 @@
 .button {
   margin-top: 50px;
   position: relative;
-  background-color: gray;
+  background-color: #00FFB1;
   border: none;
   font-size: 18px;
-  color: red;
+  color: #00B27C;
   padding: 20px;
   width: 300px;
   text-align: center;
@@ -63,6 +63,7 @@
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+  border-radius: 100%
 }
 
 .button:after {

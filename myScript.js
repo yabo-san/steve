@@ -4,11 +4,11 @@ var seconds
 function randombg(){
   var random= Math.floor(Math.random() * 6) + 0;
   var bigSize = ["url('https://timedotcom.files.wordpress.com/2016/11/kanye-west-cancels-saint-pablo-tour.jpg')",
-                "url('https://i.redd.it/al98nvymh16z.png')",
-                "url('http://i.imgur.com/XjKfgHt.jpg')",
-                "url('https://www.mobygames.com/images/promo/original/1471982997-3418226446.jpg')",
-                "url('https://upload.wikimedia.org/wikipedia/commons/0/01/80_-_Machu_Picchu_-_Juin_2009_-_edit.2.jpg')",
-                "url('https://www.azamaraclubcruises.com/sites/default/files/heros/rio-de-janeiro-brazil.jpg')"];
+                "url('https://www.1st-art-gallery.com/thumbnail/75000/75584/popular_bg/Turner/The-Slave-Ship-1840.jpg?ts=1508721122')",
+                "url('https://yoo.com/assets/Slides/_resampled/CroppedImage1440900-New-Openings-small.jpg')",
+                "url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/abstract-in-orange-and-blue-angela-anelli.jpg')",
+                "url('https://cdn.mos.cms.futurecdn.net/fb749718aaf42504e16a33ceefb62f3c.jpg')",
+                "url('https://images.pexels.com/photos/1070526/pexels-photo-1070526.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260')"];
   document.getElementById("random").style.backgroundImage=bigSize[random];
 
 }

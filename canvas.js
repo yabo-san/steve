@@ -1,9 +1,8 @@
-
 var canvas = document.getElementById("clock");
 var ctx = canvas.getContext("2d");
 
-canvas.height = 250;
-canvas.width = 250;
+canvas.height = 800;
+canvas.width = 800;
 
 var analog = true;
 
@@ -91,9 +90,10 @@ function drawDigital(){
         ctx.clearRect(0,0,canvas.width, canvas.height);
 
         clockData();
-
-        ctx.font = "30px Arial";
-        ctx.fillText(hours + ":" + minutes + ":" + seconds, 10, 50);
+        ctx.fillStyle = "#00B288";
+        ctx.textAlign = "center";
+        ctx.font = "150px Impact";
+        ctx.fillText(hours + ":" + minutes + ":" + seconds, canvas.width/2, canvas.height/2);
     }
     requestAnimationFrame(drawDigital);
 }
