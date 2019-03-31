@@ -18,10 +18,5 @@ function clockData(){
   minutes = d.getMinutes();
   seconds =d.getSeconds();
 }
-function drawDigital(){
-var c = document.getElementById("clock");
-var ctx = c.getContext("2d");
-ctx.font = "30px Arial";
-ctx.fillText(hours + ":" + minutes + ":" + seconds, 10, 50);
-}
+
   

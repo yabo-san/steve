@@ -5,7 +5,11 @@ var ctx = canvas.getContext("2d");
 canvas.height = 250;
 canvas.width = 250;
 
+let analog = true;
+
 function drawAnalog() {
+    if (!analog) return;
+
     ctx.clearRect(0,0,canvas.width, canvas.height);
     ctx.beginPath();
     ctx.arc(canvas.width / 2, canvas.height / 2, 100, 0, 2 * Math.PI, false);
@@ -78,4 +82,17 @@ function drawAnalog() {
     requestAnimationFrame(drawAnalog);
 }
 
+function drawDigital(){
+    if (analog) return;
+
+    ctx.clearRect(0,0,canvas.width, canvas.height);
+
+    ctx.font = "30px Arial";
+    ctx.fillText(hours + ":" + minutes + ":" + seconds, 10, 50);
+
+    requestAnimationFrame(drawDigital);
+}
+
+
 requestAnimationFrame(drawAnalog);
+requestAnimationFrame(drawClock);
