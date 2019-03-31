@@ -15,7 +15,7 @@ function drawAnalog() {
     if (analog) {
         ctx.clearRect(0,0,canvas.width, canvas.height);
         ctx.beginPath();
-        ctx.arc(canvas.width / 2, canvas.height / 2, 100, 0, 2 * Math.PI, false);
+        ctx.arc(canvas.width / 2, canvas.height / 2, 200, 0, 2 * Math.PI, false);
 
         ctx.strokeStyle = "#00B288";//green
         ctx.lineWidth = 10;
@@ -23,7 +23,7 @@ function drawAnalog() {
         ctx.stroke();
 
         ctx.beginPath();
-        ctx.arc(canvas.width / 2, canvas.height / 2, 105, 0, 2 * Math.PI, false);
+        ctx.arc(canvas.width / 2, canvas.height / 2, 205, 0, 2 * Math.PI, false);
 
         ctx.strokeStyle = "#FFFFFF";
         ctx.lineWidth = 1.5;
@@ -46,7 +46,7 @@ function drawAnalog() {
         ctx.lineWidth = 10;
 
         ctx.moveTo(canvas.width / 2, canvas.height / 2);
-        ctx.lineTo(canvas.width / 2, canvas.height / 2 - 90);
+        ctx.lineTo(canvas.width / 2, canvas.height / 2 - 120);
 
         ctx.stroke();
 
@@ -61,10 +61,10 @@ function drawAnalog() {
 
 
         ctx.beginPath();
-        ctx.lineWidth = 6;
+        ctx.lineWidth = 7;
 
         ctx.moveTo(canvas.width / 2, canvas.height / 2);
-        ctx.lineTo(canvas.width / 2, canvas.height / 2 - 90);
+        ctx.lineTo(canvas.width / 2, canvas.height / 2 - 160);
 
         ctx.translate(canvas.width / 2, canvas.height / 2);
         ctx.rotate(-minute);
@@ -83,7 +83,7 @@ function drawAnalog() {
         ctx.lineWidth = 3;
 
         ctx.moveTo(canvas.width / 2, canvas.height / 2);
-        ctx.lineTo(canvas.width / 2, canvas.height / 2 - 90);
+        ctx.lineTo(canvas.width / 2, canvas.height / 2 - 175);
 
         ctx.translate(canvas.width / 2, canvas.height / 2);
         ctx.rotate(-second);
