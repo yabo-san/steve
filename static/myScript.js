@@ -1,6 +1,8 @@
 var hours
 var minutes
 var seconds
+var day
+
 function randombg() {
   var random = Math.floor(Math.random() * 6) + 0;
   var bigSize = ["url('https://timedotcom.files.wordpress.com/2016/11/kanye-west-cancels-saint-pablo-tour.jpg')",
@@ -17,6 +19,7 @@ function clockData() {
   hours = d.getHours();
   minutes = d.getMinutes();
   seconds = d.getSeconds();
+  day = d.getDay();
 }
 
 

@@ -9,6 +9,16 @@ var analog = true;
 var temperature = parseFloat(document.getElementById("temp").textContent).toFixed(2);
 console.log(temperature)
 
+var weekday = new Array(7);
+weekday[0] =  "Sunday";
+weekday[1] = "Monday";
+weekday[2] = "Tuesday";
+weekday[3] = "Wednesday";
+weekday[4] = "Thursday";
+weekday[5] = "Friday";
+weekday[6] = "Saturday";
+
+
 function toggle() {
     analog = !analog;
     if (analog) {
@@ -98,6 +108,7 @@ function drawAnalog() {
         ctx.translate(-canvas.width / 2, -canvas.height / 2);
 
         ctx.stroke();
+
     }
     requestAnimationFrame(drawAnalog);
 }
@@ -128,6 +139,15 @@ function drawDigital() {
         ctx.textAlign = "center";
         ctx.font = "151px Impact";
         ctx.strokeText(time, canvas.width / 2, canvas.height / 2);
+
+        ctx.fillStyle = "#00B288";//green
+        ctx.textAlign = "center";
+        ctx.font = "150px Impact";
+        ctx.fillText(weekday[day], canvas.width / 2, canvas.height / 2 + 120);
+        ctx.strokeStyle = "white";
+        ctx.textAlign = "center";
+        ctx.font = "151px Impact";
+        ctx.strokeText(weekday[day], canvas.width / 2, canvas.height / 2 + 120);        
     }
     requestAnimationFrame(drawDigital);
 }
