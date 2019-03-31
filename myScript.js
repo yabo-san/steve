@@ -7,4 +7,12 @@ function randombg(){
                    "url('https://upload.wikimedia.org/wikipedia/commons/0/01/80_-_Machu_Picchu_-_Juin_2009_-_edit.2.jpg')",
                    "url('https://www.azamaraclubcruises.com/sites/default/files/heros/rio-de-janeiro-brazil.jpg')"];
     document.getElementById("random").style.backgroundImage=bigSize[random];
+
   }
+  function ClockData(){
+    var d = new Date();
+    document.getElementById("hour").innerHTML = d.getHours();
+    document.getElementById("minute").innerHTML = d.getMinutes();
+    document.getElementById("second").innerHTML =d.getSeconds();
+  }
+  
