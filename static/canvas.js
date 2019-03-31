@@ -164,7 +164,7 @@ for (var i = 0; i < scores.length; i++) {
 }
 ctx3.beginPath();
 ctx3.lineWidth = 3;
-ctx3.strokeStyle = 'black';
+ctx3.strokeStyle = "33334d";
 ctx3.moveTo(0, canvas3.height / 2);
 ctx3.lineTo(canvas3.width, canvas3.height / 2);
 ctx3.stroke();

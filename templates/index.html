@@ -21,13 +21,12 @@
 
 <body onload="randombg(); clockData(); drawDigital()">
 
-    <p>{{ name }}</p>
     <p id="scores" style="display: none;" >{{ scores }}</p>
     
     <div id="forms">
         <div>
             <form method = "POST">
-                <p>Tell me about your day</p>
+                <p id="message">{{ message }}</p>
                 <input name ="text" id="thoughts">
                 </input>
             </form>
