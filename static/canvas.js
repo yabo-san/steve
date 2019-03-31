@@ -6,7 +6,7 @@ canvas.width = 800;
 
 var analog = true;
 
-var tempurature = "72";
+var temperature = document.getElementById("temp").textContent;
 
 function toggle() {
     analog = !analog;
@@ -139,11 +139,11 @@ function drawWeather() {
     ctx2.fillStyle = "#00B288";//green
     ctx2.textAlign = "center";
     ctx2.font = "60px Impact";
-    ctx2.fillText(tempurature + "°", canvas2.width/2, canvas2.height/2);
+    ctx2.fillText(temperature + "°F", canvas2.width/2, canvas2.height/2);
     ctx2.strokeStyle = "white";
     ctx2.textAlign = "center";
     ctx2.font = "60.5px Impact";
-    ctx2.strokeText(tempurature + "°", canvas2.width/2, canvas2.height/2);
+    ctx2.strokeText(temperature + "°F", canvas2.width/2, canvas2.height/2);
     //requestAnimationFrame(drawWeather);
 }
 drawWeather();
