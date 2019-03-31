@@ -22,6 +22,6 @@ function drawDigital(){
 var c = document.getElementById("clock");
 var ctx = c.getContext("2d");
 ctx.font = "30px Arial";
-ctx.fillText(hours + ":" + minutes + seconds, 10, 50);
+ctx.fillText(hours + ":" + minutes + ":" + seconds, 10, 50);
 }
   
