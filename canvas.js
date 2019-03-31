@@ -6,14 +6,16 @@ canvas.width = 800;
 
 var analog = true;
 
+var tempurature = "72";
+
 function toggle() {
- analog = !analog;
- console.log(analog);
-}    
+    analog = !analog;
+    console.log(analog);
+}
 
 function drawAnalog() {
     if (analog) {
-        ctx.clearRect(0,0,canvas.width, canvas.height);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.beginPath();
         ctx.arc(canvas.width / 2, canvas.height / 2, 200, 0, 2 * Math.PI, false);
 
@@ -94,32 +96,32 @@ function drawAnalog() {
     requestAnimationFrame(drawAnalog);
 }
 
-function drawDigital(){
+function drawDigital() {
     if (!analog) {
-        ctx.clearRect(0,0,canvas.width, canvas.height);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         clockData();
         var time = "";
-        if(hours < 10){
-            time +='0';
+        if (hours < 10) {
+            time += '0';
         }
         time += hours + ":";
-        if(minutes < 10){
-            time +='0';
+        if (minutes < 10) {
+            time += '0';
         }
         time += minutes + ":";
-        if(seconds < 10){
-            time +='0';
+        if (seconds < 10) {
+            time += '0';
         }
         time += seconds;
         ctx.fillStyle = "#00B288";//green
         ctx.textAlign = "center";
         ctx.font = "150px Impact";
-        ctx.fillText(time, canvas.width/2, canvas.height/2);
+        ctx.fillText(time, canvas.width / 2, canvas.height / 2);
         ctx.strokeStyle = "white";
         ctx.textAlign = "center";
         ctx.font = "151px Impact";
-        ctx.strokeText(time, canvas.width/2, canvas.height/2);
+        ctx.strokeText(time, canvas.width / 2, canvas.height / 2);
     }
     requestAnimationFrame(drawDigital);
 }
@@ -127,3 +129,22 @@ function drawDigital(){
 
 requestAnimationFrame(drawAnalog);
 requestAnimationFrame(drawDigital);
+
+var canvas2 = document.getElementById("weather");
+var ctx2 = canvas2.getContext("2d");
+canvas2.height = 200;
+canvas2.width = 200;
+
+function drawWeather() {
+    ctx2.fillStyle = "#00B288";//green
+    ctx2.textAlign = "center";
+    ctx2.font = "60px Impact";
+    ctx2.fillText(tempurature + "°", canvas2.width/2, canvas2.height/2);
+    ctx2.strokeStyle = "white";
+    ctx2.textAlign = "center";
+    ctx2.font = "60.5px Impact";
+    ctx2.strokeText(tempurature + "°", canvas2.width/2, canvas2.height/2);
+    //requestAnimationFrame(drawWeather);
+}
+drawWeather();
+//requestAnimationFrame(drawWeather);

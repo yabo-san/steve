@@ -85,3 +85,9 @@
   opacity: 1;
   transition: 0s
 }
+#weather{
+  margin: 0;
+  padding: 0.9%;
+  font-size: 100px;
+  z-index: 5;
+}
