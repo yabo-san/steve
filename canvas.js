@@ -7,6 +7,10 @@ canvas.width = 250;
 
 let analog = true;
 
+function toggle() {
+ analog = !analog;
+}    
+
 function drawAnalog() {
     if (!analog) return;
 
