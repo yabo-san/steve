@@ -35,10 +35,14 @@
     bottom: 0; 
 
     z-index: 3;
+
+
 }
 
 #forms
 {
+  padding: 70px 0;
+  border: 3px solid green;
   text-align: center;
-
+  
 }

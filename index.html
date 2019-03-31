@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html>
-        <head>
-            <link rel="icon" href="favicon.ico">
-            
-            <meta charset="utf-8">
-            <link rel="stylesheet" href="style.css">
-            <link rel="stylesheet" src="https://cdn.rawgit.com/marmelab/universal.css/master/universal.css" />
-            <script src="myScript.js"></script>
-            <title>
-                my favorites
-            </title>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    </head>
-        <div id="random" ></div>
+
+<head>
+    <link rel="icon" href="favicon.ico">
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" src="https://cdn.rawgit.com/marmelab/universal.css/master/universal.css" />
+    <script src="myScript.js"></script>
+    <title>
+        my favorites
+    </title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<div id="random"></div>
 
 
 
 
 <body onload="randombg(); clockData(); drawDigital()">
-    <canvas id="clock"></canvas> 
+    <canvas id="clock"></canvas>
     <script src="canvas.js"></script>
 
-    <div class = "w3-display" id = "forms">
-        <canvas id = "clock"></canvas>
+    <div id="forms">
+        <canvas id="clock"></canvas>
         <div>
             <form>
-                    <p class = "w3-transparent w3-text-white w3-margin">Tell me about your day</p>
-                    <input type = "text" id = "thoughts">
-                    </input>
-                    <button>Submit</button>
-                </form>
-    </div>
-    <div id="hour"></div>
-    <div id="minute"></div>
-    <div id="second"></div>
-    <button onclick="toggle()"> toggle analog vs digital</button>
+                <p>Tell me about your day</p>
+                <input type="text" id="thoughts">
+                </input>
+                <button>Submit</button>
+            </form>
 
+            <button onclick="toggle()"> toggle analog vs digital</button>
+
+        </div>
+    </div>
 
 </body>
-</div>
 
 </html>
 
