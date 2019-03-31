@@ -94,6 +94,10 @@ function drawDigital(){
         ctx.textAlign = "center";
         ctx.font = "150px Impact";
         ctx.fillText(hours + ":" + minutes + ":" + seconds, canvas.width/2, canvas.height/2);
+        ctx.strokeStyle = "white";
+        ctx.textAlign = "center";
+        ctx.font = "151px Impact";
+        ctx.strokeText(hours + ":" + minutes + ":" + seconds, canvas.width/2, canvas.height/2);
     }
     requestAnimationFrame(drawDigital);
 }
