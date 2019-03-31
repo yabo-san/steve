@@ -162,3 +162,9 @@ for (var i = 0; i < scores.length; i++) {
     ctx3.fillStyle = (scores[i] >= 0) ? "#00B288" : "#f21a78";
     ctx3.fillRect(i * bar_width, canvas3.height / 2, bar_width, scores[i] * -100);
 }
+ctx3.beginPath();
+ctx3.lineWidth = 3;
+ctx3.strokeStyle = 'black';
+ctx3.moveTo(0, canvas3.height / 2);
+ctx3.lineTo(canvas3.width, canvas3.height / 2);
+ctx3.stroke();
