@@ -55,7 +55,7 @@
   border: none;
   font-size: 18px;
   color: #00B27C;
-  padding: 20px;
+  padding: 5px;
   width: 300px;
   text-align: center;
   -webkit-transition-duration: 0.4s; /* Safari */
@@ -63,7 +63,7 @@
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 100%
+  /*border-radius: 100% */
 }
 
 .button:after {
