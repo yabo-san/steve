@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="favicon.ico">
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" type = "text/css" href="{{ url_for('static' , filename='style.css') }}" />
+    <link rel="stylesheet" type = "text/css" href="{{ url_for('static' , filename='other.css') }}" />
+    <script type = "text/javascript" src="{{ url_for('static' , filename='myScript.js') }}"></script>
+    <link type = "text/css" rel="stylesheet" href="{{ url_for('static' , filename='w3.css') }}" />
+    <title>
+        my favorites
+    </title>
+
+</head>
+<div id="random" z-index="-1"></div>
+
+
+
+
+<body onload="randombg(); clockData(); drawDigital()">
+
+    <p>{{ name }}</p>
+    <p id="scores" style="display: none;" >{{ scores }}</p>
+    
+    <div id="forms">
+        <div>
+            <form method = "POST">
+                <p>Tell me about your day</p>
+                <input name ="text" id="thoughts">
+                </input>
+            </form>
+
+            <button class = "button" onclick="toggle()"> toggle analog vs digital</button>
+            <button class = "button" onclick="randombg()">new background</button>
+
+        </div>
+    </div>
+    <canvas id = "weather"></canvas>
+    <canvas id="clock"></canvas>
+    <script src="{{ url_for('static' , filename= 'canvas.js') }}"></script>
+
+
+
+</body>
+
+</html>
+
+<!--
+<button onclick="randombg()">reload simulation</button>
+-->
