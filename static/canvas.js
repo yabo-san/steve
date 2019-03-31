@@ -6,7 +6,8 @@ canvas.width = 800;
 
 var analog = true;
 
-var temperature = document.getElementById("temp").textContent;
+var temperature = parseFloat(document.getElementById("temp").textContent).toFixed(2);
+console.log(temperature)
 
 function toggle() {
     analog = !analog;
@@ -139,6 +140,7 @@ function drawWeather() {
     ctx2.fillStyle = "#00B288";//green
     ctx2.textAlign = "center";
     ctx2.font = "60px Impact";
+
     ctx2.fillText(temperature + "°F", canvas2.width/2, canvas2.height/2);
     ctx2.strokeStyle = "white";
     ctx2.textAlign = "center";
