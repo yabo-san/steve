@@ -11,16 +11,32 @@
             <title>
                 my favorites
             </title>
-        </head>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+    </head>
+        <div id="random" ></div>
 
-</html>
+
+
+
 <body onload="CoolClock.findAndCreateClocks(); randombg(); ">
     <canvas id="clockid" class="CoolClock:simple:150:noSeconds:GMTOffset"></canvas>
 
-    <div id="random" ></div>
+
+    <div class = "w3-display" id = "forms">
+        <div>
+            <form>
+                    <p class = "w3-transparent w3-text-white w3-margin">Tell me about your day</p>
+                    <input type = "text" id = "thoughts">
+                    </input>
+                    <button>Submit</button>
+                </form>
+    </div>
 
 </body>
+</div>
+
+</html>
 
 <!--
 <button onclick="randombg()">reload simulation</button>
