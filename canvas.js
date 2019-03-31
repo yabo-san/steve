@@ -17,8 +17,17 @@ function drawAnalog() {
         ctx.beginPath();
         ctx.arc(canvas.width / 2, canvas.height / 2, 100, 0, 2 * Math.PI, false);
 
-        ctx.strokeStyle = "#f3306e";
+        ctx.strokeStyle = "#00B288";//green
         ctx.lineWidth = 10;
+
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(canvas.width / 2, canvas.height / 2, 105, 0, 2 * Math.PI, false);
+
+        ctx.strokeStyle = "#FFFFFF";
+        ctx.lineWidth = 1.5;
+
         ctx.stroke();
 
         clockData();
@@ -90,14 +99,27 @@ function drawDigital(){
         ctx.clearRect(0,0,canvas.width, canvas.height);
 
         clockData();
-        ctx.fillStyle = "#00B288";
+        var time = "";
+        if(hours < 10){
+            time +='0';
+        }
+        time += hours + ":";
+        if(minutes < 10){
+            time +='0';
+        }
+        time += minutes + ":";
+        if(seconds < 10){
+            time +='0';
+        }
+        time += seconds;
+        ctx.fillStyle = "#00B288";//green
         ctx.textAlign = "center";
         ctx.font = "150px Impact";
-        ctx.fillText(hours + ":" + minutes + ":" + seconds, canvas.width/2, canvas.height/2);
+        ctx.fillText(time, canvas.width/2, canvas.height/2);
         ctx.strokeStyle = "white";
         ctx.textAlign = "center";
         ctx.font = "151px Impact";
-        ctx.strokeText(hours + ":" + minutes + ":" + seconds, canvas.width/2, canvas.height/2);
+        ctx.strokeText(time, canvas.width/2, canvas.height/2);
     }
     requestAnimationFrame(drawDigital);
 }
