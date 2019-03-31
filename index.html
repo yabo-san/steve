@@ -19,11 +19,8 @@
 
 
 <body onload="randombg(); clockData(); drawDigital()">
-    <canvas id="clock"></canvas>
-    <script src="canvas.js"></script>
 
     <div id="forms">
-        <canvas id="clock"></canvas>
         <div>
             <form>
                 <p>Tell me about your day</p>
@@ -32,10 +29,14 @@
                 <button>Submit</button>
             </form>
 
-            <button onclick="toggle()"> toggle analog vs digital</button>
+            <button class = "button" onclick="toggle()"> toggle analog vs digital</button>
 
         </div>
     </div>
+    <canvas id="clock"></canvas>
+    <script src="canvas.js"></script>
+
+
 
 </body>
 
