@@ -18,7 +18,7 @@ client = language.LanguageServiceClient()
 
 temp = 0
 scores = []
-bad_messages = ["Sorry to hear about that.", ":("]
+bad_messages = ["Sorry to hear about that.", ":(", "chinup, buttercup", "u deserve to be happy"]
 good_messages = ["Glad to hear that!", ":)"]
 app = Flask(__name__)
 
