@@ -5,10 +5,11 @@ var ctx = canvas.getContext("2d");
 canvas.height = 250;
 canvas.width = 250;
 
-let analog = true;
+var analog = true;
 
 function toggle() {
  analog = !analog;
+ console.log(analog);
 }    
 
 function drawAnalog() {
@@ -99,4 +100,4 @@ function drawDigital(){
 
 
 requestAnimationFrame(drawAnalog);
-requestAnimationFrame(drawClock);
+requestAnimationFrame(drawDigital);
