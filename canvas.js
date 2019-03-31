@@ -5,19 +5,20 @@ var ctx = canvas.getContext("2d");
 canvas.height = 250;
 canvas.width = 250;
 
-ctx.beginPath();
-ctx.arc(canvas.width / 2, canvas.height / 2, 100, 0, 2 * Math.PI, false);
-
-ctx.strokeStyle = "#f3306e";
-ctx.lineWidth = 10;
-ctx.stroke();
-
 function drawAnalog() {
+    ctx.clearRect(0,0,canvas.width, canvas.height);
+    ctx.beginPath();
+    ctx.arc(canvas.width / 2, canvas.height / 2, 100, 0, 2 * Math.PI, false);
+
+    ctx.strokeStyle = "#f3306e";
+    ctx.lineWidth = 10;
+    ctx.stroke();
+
     clockData();
 
-    let hour = hours;
-    let minute = 90;
-    let second = 45;
+    let hour = (hours * 3600 + minutes * 60 + seconds) * 2 * Math.PI / (3600 * 12);
+    let minute = (seconds + minutes * 60) * 2 * Math.PI / (3600);
+    let second = seconds * 2 * Math.PI / 60;
 
     //hour hand
     ctx.strokeStyle = "#33334d";
@@ -73,6 +74,8 @@ function drawAnalog() {
     ctx.translate(-canvas.width / 2, -canvas.height / 2);
 
     ctx.stroke();
+
+    requestAnimationFrame(drawAnalog);
 }
 
-drawAnalog();
+requestAnimationFrame(drawAnalog);
