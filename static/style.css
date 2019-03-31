@@ -15,7 +15,7 @@
     right:0px;
     
     /* ENHANCEMENT */
-    background-image: url('https://i.redd.it/r0ad288kma8x.jpg');
+    background-image: url('http://www.aljanh.net/data/archive/img/884910882.jpeg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;  
@@ -29,7 +29,7 @@
     left: 0;
     right: 0; 
 
-    margin-top: auto;
+    margin-top: 0;
     margin-bottom: auto;
     top: 0;
     bottom: 0; 
@@ -44,17 +44,16 @@
   text-align: center;
   margin: 0;
   position: absolute;
-  top: 75%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .button {
-  margin-top: 50px;
+  margin-top: 25px;
   position: relative;
   background-color: #00FFB1;
   border: none;
   font-size: 18px;
-  color: #00B27C;
   padding: 5px;
   width: 300px;
   text-align: center;

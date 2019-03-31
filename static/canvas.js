@@ -1,8 +1,8 @@
 var canvas = document.getElementById("clock");
 var ctx = canvas.getContext("2d");
 
-canvas.height = 800;
-canvas.width = 800;
+canvas.height = 500;
+canvas.width = 530;
 
 var analog = true;
 
@@ -11,7 +11,12 @@ console.log(temperature)
 
 function toggle() {
     analog = !analog;
-    console.log(analog);
+    if (analog) {
+        document.getElementById("toggle").textContent = "Digital";
+    }
+    else {
+        document.getElementById("toggle").textContent = "Analog";
+    }
 }
 
 function drawAnalog() {

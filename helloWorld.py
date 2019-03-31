@@ -16,6 +16,7 @@ import json
 # Instantiates a client
 client = language.LanguageServiceClient()
 
+temp = 0
 scores = []
 bad_messages = ["Sorry to hear about that.", ":(", "chinup, buttercup", "u deserve to be happy"]
 good_messages = ["Glad to hear that!", ":)"]
@@ -34,13 +35,15 @@ app.static_folder = 'static'
 
 @app.route('/')
 def index():
-	url = "https://api.openweathermap.org/data/2.5/weather?q=Irvine,us&appid=82ba4dc01a7836a5be67eab31dea86b9"
+	url = "https://api.openweathermap.org/data/2.5/weather?q=Los%20Angeles,us&appid=82ba4dc01a7836a5be67eab31dea86b9"
 	
 	response = urlopen(url)
 	data = response.read().decode('utf-8')
 	json_dict = json.loads(data)
+
+	global temp
 	temp = (float(json_dict["main"]["temp"]) - 273.15) * 9/5 + 32
-	return render_template('index.html', message="Tell me about your day", scores="", temp=temp)
+	return render_template('index.html', message="What's new?", scores="", temp=temp)
 
 
 
@@ -66,13 +69,7 @@ def my_form_post():
 
 	message = random.choice(good_messages) if (sentiment.score >= 0) else random.choice(bad_messages)
 	
-	url = "https://api.openweathermap.org/data/2.5/weather?q=Irvine,us&appid=82ba4dc01a7836a5be67eab31dea86b9"
-	
-	response = urlopen(url)
-	data = response.read().decode('utf-8')
-	json_dict = json.loads(data)
-	temp = (float(json_dict["main"]["temp"]) - 273.15) * 9/5 + 32
-
+	global temp
 	return render_template('index.html', message=message, scores=scores_string, temp=temp)
 
 if __name__ == '__main__':
