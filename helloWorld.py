@@ -8,8 +8,8 @@ from google.cloud.language import types
 
 # Instantiates a client
 client = language.LanguageServiceClient()
-scores=[]
 
+scores = []
 app = Flask(__name__)
 
 #js = Bundle('myScript.js', output= 'gen/main.js')
@@ -25,13 +25,13 @@ app.static_folder = 'static'
 
 @app.route('/')
 def index():
-    return render_template('index.html', name="", scores=[])
+    return render_template('index.html', name="", scores="")
 
 @app.route('/', methods=['POST'])
 def my_form_post():
 	text = request.form['text']
 
-
+	global scores
 	# The text to analyze
 	document = types.Document(
 		content=text,
@@ -39,8 +39,14 @@ def my_form_post():
 
 	# Detects the sentiment of the text
 	sentiment = client.analyze_sentiment(document=document).document_sentiment
-	scores.append(sentiment.score)
-	return render_template('index.html', name="Sorry to hear you're sad", scores=scores)
+	scores.append(str(sentiment.score))
+
+	if len(scores) > 7:
+		scores = scores[1:]
+
+	scores_string = "|"
+	scores_string = scores_string.join(scores)
+	return render_template('index.html', name="Sorry to hear you're sad", scores=scores_string)
 
 if __name__ == '__main__':
 	app.run(debug=True)
