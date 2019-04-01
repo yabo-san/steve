@@ -10,7 +10,7 @@ var temperature = parseFloat(document.getElementById("temp").textContent).toFixe
 console.log(temperature)
 
 var weekday = new Array(7);
-weekday[0] =  "Sunday";
+weekday[0] = "Sunday";
 weekday[1] = "Monday";
 weekday[2] = "Tuesday";
 weekday[3] = "Wednesday";
@@ -39,6 +39,26 @@ function drawAnalog() {
         ctx.lineWidth = 10;
 
         ctx.stroke();
+
+        //ticks
+        ctx.lineWidth = 5;
+
+        for (let i = 0; i < 12; i++) {
+            let theta = i * 2 * Math.PI / 12;
+            let length = 10 + ((i % 3 == 0) ? 10 : 0);
+            ctx.translate(canvas.width / 2, canvas.height / 2);
+            ctx.rotate(theta);
+            ctx.translate(-canvas.width / 2, -canvas.height / 2);
+
+            ctx.beginPath();
+            ctx.moveTo(canvas.width / 2, canvas.height / 2 + 195);
+            ctx.lineTo(canvas.width / 2, canvas.height / 2 + 195 - length);
+            ctx.stroke();
+
+            ctx.translate(canvas.width / 2, canvas.height / 2);
+            ctx.rotate(-theta);
+            ctx.translate(-canvas.width / 2, -canvas.height / 2);
+        }
 
         ctx.beginPath();
         ctx.arc(canvas.width / 2, canvas.height / 2, 205, 0, 2 * Math.PI, false);
@@ -108,6 +128,7 @@ function drawAnalog() {
         ctx.translate(-canvas.width / 2, -canvas.height / 2);
 
         ctx.stroke();
+
 
     }
     requestAnimationFrame(drawAnalog);
